@@ -1,10 +1,18 @@
-<footer class="footer">
-  <img class="brand-icon" src="https://cdn.learnku.com/uploads/sites/KDiyAbV0hj1ytHpRTOlVpucbLebonxeX.png">
-  <a href="https://learnku.com/laravel/courses" target=_blank>
-    刻意练习，每日精进
-  </a>
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>@yield('title', 'Weibo App') - Laravel 入门教程</title>
+    <link rel="stylesheet" href="{{ mix('css/app.css') }}">
+  </head>
 
-  <div class="float-right">
-    <a href="/about" >关于</a>
-  </div>
-</footer>
+  <body>
+    @include('layouts._header')
+
+    <div class="container">
+      <div class="offset-md-1 col-md-10">
+        @yield('content')
+        @include('layouts._footer')
+      </div>
+    </div>
+  </body>
+</html>
